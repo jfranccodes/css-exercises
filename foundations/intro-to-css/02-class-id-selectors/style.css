@@ -1,1 +1,26 @@
 /* Add CSS Styling */
+
+
+/* shared rules for all odd items */
+.odd {
+  background-color: #ffd7d9; /* light pink */
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+/* extra rule only for the third element (both classes) */
+.odd.big {
+  font-size: 24px;
+}
+
+/* second element as an ID */
+#second {
+  color: #0000ff;
+  font-size: 36px;
+}
+
+/* fourth element: light green, 24px, bold */
+#fourth {
+  background-color: #d7f5d8; /* light green */
+  font-size: 24px;
+  font-weight: bold;
+}
