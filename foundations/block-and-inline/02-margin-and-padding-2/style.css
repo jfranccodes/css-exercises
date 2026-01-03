@@ -4,24 +4,44 @@ body {
 }
 
 .card {
-  width: 400px;
+  width: 900px;
+  max-width: 90%;
   background: #fff;
-  margin: 16px auto;
+  margin: 24px auto;
+  padding: 24px;         /* white gutters around blue blocks */
+  box-sizing: border-box;
+}
+
+.card > * {
+  background: #e3f4ff;
+  padding: 24px;         /* inner spacing inside each blue block */
+}
+
+.card > *:not(:last-child) {
+  margin-bottom: 16px;   /* white gap between blue blocks */
 }
 
 .title {
-  background: #e3f4ff;
+  margin: 0;
+  font-size: 32px;
 }
 
 .content {
-  background: #e3f4ff;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .button-container {
-  background: #e3f4ff;
+  text-align: center;
 }
 
-button {
-  background: white;
+.button-container button {
+  display: block;
+  margin: 16px auto 0;
+  padding: 12px 40px;
+  font-size: 18px;
+  text-transform: uppercase;
   border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
 }
