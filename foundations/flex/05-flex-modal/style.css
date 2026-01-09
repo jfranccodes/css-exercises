@@ -16,13 +16,18 @@ body {
 }
 
 .modal {
-  background: white;
+  display: flex;
+  align-items: flex-start;   /* icon sits at top-left of content */
+  gap: 24px;                 /* space between icon and content */
+  padding: 24px;             /* equal space to the card edge (matches gap) */
   width: 480px;
   border-radius: 10px;
+  background: white;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
 }
 
 .icon {
+  flex: 0 0 42px;            /* fixed size column for icon */
   color: royalblue;
   font-size: 26px;
   font-weight: 700;
@@ -66,4 +71,32 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.content {
+  flex: 1 1 auto;            /* content takes remaining space, prevents icon crush */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes close button to the right */
+}
+
+.header {
+  font-weight: 700;
+  font-size: 18px;           /* slightly bigger than body text */
+}
+
+.text {
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end; /* buttons aligned with each other and to the right */
 }
